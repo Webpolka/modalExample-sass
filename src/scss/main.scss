@@ -1,0 +1,30 @@
+@use "sass:math";
+
+
+@import "config/vars";
+
+/** Обнуление */
+@import "config/reset";
+
+
+/**
+* Подключение шрифтов локально из папки "./src/fonts"
+*/
+@import "config/fonts";
+
+/** Подключение переменных */
+@import "config/root";
+
+/**
+* Подключение sass function и mixins и extends стилей
+*/
+@import "config/functions";
+@import "config/mixins";
+
+@import "config/typography";
+
+@import "config/utils";
+/**
+* Подключение стилей отдельных блоков и секций
+*/
+@import "components/*.scss";

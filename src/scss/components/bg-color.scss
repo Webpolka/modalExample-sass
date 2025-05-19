@@ -1,0 +1,33 @@
+/*--------------------------------------------------------------------------------------------------------------------------------
+ФОНЫ ПЛИТОК
+----------------------------------------------------------------------------------------------------------------------------------*/
+.modalBtn-bg-sky,
+.modalBtn-bg-violet,
+.modalBtn-bg-blue,
+.modalBtn-bg-gold,
+.modalBtn-bg-green {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 3px;
+	z-index: 1;
+	border-radius: 8px;	
+}
+
+.modalBtn-bg-sky {
+	background-color: #057acb;
+}
+.modalBtn-bg-blue {
+	background-color: rgb(5, 124, 204);
+}
+
+.modalBtn-bg-gold {
+	background-color: rgb(253, 190, 19);
+}
+.modalBtn-bg-violet {
+	background-color: #9534ef;
+}
+.modalBtn-bg-green {
+	background-color: rgb(0, 178, 113);
+}

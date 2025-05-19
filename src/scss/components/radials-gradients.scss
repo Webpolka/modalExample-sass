@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------------------------------------------------------------------------
+РАДИАЛЬНЫЕ ГРАДИЕНТЫ
+----------------------------------------------------------------------------------------------------------------------------------*/
+.radial-sky,
+.radial-blue,
+.radial-gold,
+.radial-violet,
+.radial-green {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+.radial-sky {
+	background: rgb(5, 124, 204);
+	background: radial-gradient(circle, rgb(48 161 237) 26%, rgb(60 111 244 / 93%) 49%, rgba(237, 221, 83, 0) 67%);
+}
+.radial-blue {
+	background: rgb(5, 124, 204);
+	background: radial-gradient(circle, rgb(5, 124, 204) 26%, rgba(132, 165, 249, 0.93) 49%, rgba(237, 221, 83, 0) 67%);
+}
+
+.radial-gold {
+	background: rgb(253, 190, 19);
+	background: radial-gradient(circle, rgb(253, 190, 19) 0%, rgb(241, 253, 19) 0%, rgba(237, 221, 83, 0) 61%);
+}
+
+.radial-violet {
+	background: rgb(162, 41, 255);
+	background: radial-gradient(circle, rgb(162, 41, 255) 0%, rgb(244, 104, 251) 0%, rgba(237, 221, 83, 0) 61%);
+}
+
+.radial-green {
+	background: rgb(0, 178, 113);
+	background: radial-gradient(circle, rgb(57 245 75) 0%, rgb(142, 254, 89) 0%, rgba(237, 221, 83, 0) 61%);
+}

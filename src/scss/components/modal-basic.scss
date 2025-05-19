@@ -1,0 +1,228 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+МОДАЛЬНОЕ ОКНО (ФОН и РАМКА)
+-----------------------------------------------------------------------------------------------------------------------*/
+.popup-modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+
+	z-index: -1;
+	&.show {
+		z-index: 100;
+		// Стили для плавного перехода
+		.popup-bg {
+			opacity: 0.75;
+			visibility: visible;
+		}
+		.modal {
+			opacity: 1;
+			visibility: visible;
+			transform: scale(1) translateY(-50%);
+		}
+	}
+}
+.popup-bg {
+	visibility: hidden;
+	opacity: 0;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110%;
+	height: 110%;
+	background-color: rgb(0, 0, 0);
+	background-image: url("../../images/rainbow.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	transition: all 0.1s ease;
+}
+
+.modal {
+	// отступ по сторонам при адаптиве
+	--adaptive-margin: 15px;
+
+	@include m500 {
+		max-height: 100vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	// Стили для плавного перехода
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+
+	font-family: "LilitaOne", cursive;
+	color: white;
+
+	position: fixed;
+	top: 50%;
+	left: 0;
+	right: 0;
+	z-index: 500;
+
+	transform: translateY(-50%);
+	margin-left: auto;
+	margin-right: auto;
+
+	max-width: 840px;
+	padding: 0 var(--adaptive-margin);
+
+	// ГОРИЗОНТАЛЬНАЯ ТЕНЬ
+	&:before {
+		position: absolute;
+		content: "";
+		top: 130px;
+		left: 0;
+		width: 100%;
+		min-height: 100px;
+		background-image: url("../../images/popup-shadow.png");
+		background-repeat: no-repeat;
+		background-size: 100% 50px;
+		z-index: 2;
+		transition: all 0.3s ease-in-out;
+		@include md {
+			top: 120px;
+		}
+		@include sm {
+			top: 120px;
+		}
+		@media (max-width: 375px) {
+			top: 112px;
+		}
+	}
+
+	// РАЗМЫТИЕ
+	&:after {
+		position: absolute;
+		content: "";
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 50%;
+		min-height: 50%;
+		background-image: url("../../images/popup-glow.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		z-index: 0;
+		transition: all 0.3s ease-in-out;
+	}
+
+	// Тело модального окна
+	&-tile {
+		margin-top: 100px;
+		margin-bottom: 100px;
+		position: relative;
+		padding: 42px 30px;
+		border-radius: 8px;
+		background-color: #023875;
+
+		@media (max-width: 500px) {
+			padding-top: 35px;
+			padding-bottom: 25px;
+		}
+	}
+
+	// Кнопка закрыть окно
+	&-close {
+		position: absolute;
+		top: -3px;
+		right: -3px;
+		z-index: 500;
+
+		padding: 10px;
+		@media (max-width: 500px) {
+			padding: 8px;
+		}
+		@media (max-width: 420px) {
+			padding: 6px;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background: #574e68;
+		border: 1px solid rgb(0, 0, 0, 0.35);
+		border-radius: 6px;
+
+		outline: none;
+		box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.3);
+
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			background-color: #4f4b57;
+		}
+	}
+
+	// заголовок окна
+	&-header {
+		position: absolute;
+		top: -26px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+
+		width: 400px;
+		height: 75px;
+
+		background-image: url("../../images/title-bg.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: 500px) {
+			width: 350px;
+			height: 60px;
+		}
+		@media (max-width: 440px) {
+			width: 300px;
+			height: 50px;
+			top: -16px;
+		}
+
+		@media (max-width: 390px) {
+			width: 260px;
+		}
+		@media (max-width: 350px) {
+			width: 220px;
+		}
+
+		h3 {
+			position: absolute;
+			top: 13px;
+			left: 50%;
+			transform: translateX(-50%);
+
+			font-size: 32px;
+			font-weight: normal;
+			transition: all 0.3s ease-in-out;
+			@media (max-width: 500px) {
+				top: 8px;
+				font-size: 28px;
+			}
+			@media (max-width: 440px) {
+				font-size: 24px;
+				top: 6px;
+			}			
+			@media (max-width: 390px) {
+				top: 8px;
+				font-size: 24px;
+			}
+			@media (max-width: 350px) {
+				top: 8px;
+				font-size: 22px;
+			}
+			
+
+			
+		}
+	}
+}

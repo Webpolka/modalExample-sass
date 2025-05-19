@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	@@include('html/components/head.html', { 'title': 'Модальное окно PLAYKISSME' })
+
+	<body>
+		<!-- МОДАЛКА 1 -->
+		@@include('html/sections/modal1.html')
+
+		<!-- МОДАЛКА 2 -->
+		@@include('html/sections/modal2.html')
+
+		<div class="modal-extra-buttons">
+			<!-- ПРОСТО КНОПКИ УБЕРЕТЕ ЕЕ !! -->
+			<button data-popup-open="1" class="extra-example">Открыть модальное окно 1</button>
+
+			<button data-popup-open="2" class="extra-example">Открыть модальное окно 2</button>
+		</div>
+
+		@@include('html/components/script.html')
+	</body>
+</html>

@@ -1,0 +1,36 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+ТЕКСТ С ОТТЕНКОМ 
+--------------------------------------------------------------------------------------------------------------------- */
+
+.gold-text {
+	color: #fdf5be !important;
+	span {
+		color: #fdf5be !important;
+	}
+}
+.violet-text {
+	color: #ffaef8 !important;
+	span {
+		color: #ffaef8 !important;
+	}
+}
+.blue-text {
+	color: #fff !important;
+	span {
+		color: #fff !important;
+	}
+}
+.green-text {
+	color: #c9ffa9 !important;
+	span {
+		color: #c9ffa9 !important;
+	}
+}
+
+
+/* ----------- EXTRA ---------------*/
+.topline-red {
+	color: #ff6788 !important;
+	font-size: 0.8rem !important;
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+}
