@@ -984,6 +984,7 @@ sup {
   z-index: 0;
 }
 .modal-grid_tiles .tiles .tile-goldpack_topline {
+  display: block;
   position: relative;
   z-index: 5;
   padding-top: 5px;
@@ -998,6 +999,7 @@ sup {
   }
 }
 .modal-grid_tiles .tiles .tile-goldpack_bottomline {
+  display: block;
   position: relative;
   z-index: 5;
   display: flex;

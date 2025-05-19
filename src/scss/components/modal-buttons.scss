@@ -631,6 +631,7 @@
 
 				// ВЕРХНЯЯ ЛИНИЯ С ТЕКСТОМ
 				&-goldpack_topline {
+					display: block;
 					position: relative;
 					z-index: 5;
 					padding-top: 5px;
@@ -646,6 +647,7 @@
 
 				// НИЖНЯЯ ЛИНИЯ С КРИСТАЛОМ
 				&-goldpack_bottomline {
+					display: block;
 					position: relative;
 					z-index: 5;
 
